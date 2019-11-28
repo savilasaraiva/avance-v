@@ -1,0 +1,116 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avance RH</title>
+
+    <!-- Favicons -->
+    <link href="img/avance-test-logo.png" rel="icon" />
+    <link href="img/avance-test-logo.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      th:href="@{/lib/cyborg/bootstrap.min.css}"
+    />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"
+          ><img th:src="@{/img/avance-test_lo_.png}"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main class="login-form">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-9 col-md-7">
+            <div class="card bg-light">
+              <div class="card-header"><h4 class="card-title">LOGIN</h4></div>
+              <div class="card-body">
+                <form action="" method="">
+                  <div class="form-group row">
+                    <label
+                      for="usuario"
+                      class="col-md-4 col-form-label text-md-right"
+                      >Usuário</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        id="usuario"
+                        class="form-control"
+                        name="usuario"
+                        required
+                        autofocus
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label
+                      for="senha"
+                      class="col-md-4 col-form-label text-md-right"
+                      >Senha</label
+                    >
+                    <div class="col-md-6">
+                      <input
+                        type="password"
+                        id="senha"
+                        class="form-control"
+                        name="senha"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-secondary login">
+                      ENTRAR
+                    </button>
+                    <br />
+                    <a href="#" class="btn btn-link">ESQUECI A SENHA</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      type="text/javascript"
+      th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"
+    ></script>
+    <script
+      type="text/javascript"
+      th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"
+    ></script>
+  </body>
+</html>

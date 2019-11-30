@@ -8,92 +8,44 @@
 
     <!-- Favicons -->
     <link th:href="@{/img/avance-logo.png}" rel="icon" />
-    <link th:href="@{/img/avance-logo.png}" rel="apple-touch-icon" />
+    <link th:href="@{img/avance-logo.png}" rel="apple-touch-icon" />
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet" />
     <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}" />
-    <link rel="stylesheet" type="text/css" th:href="@{/lib/ionicons/css/ionicons.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/lib/darkly/bootstrap.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
-    <link rel="stylesheet" type="text/css"
-      th:href="@{/lib/dataTables/DataTables-1.10.20/css/dataTables.bootstrap4.min.css}" />
   </head>
 
   <body>
-    <nav class="navbar navbar-dark navbar-expand-md justify-content-center">
-      <a href="/" class="navbar-brand d-flex w-50 mr-auto"><img th:src="@{/img/avance-oficial.png}"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-        <ul class="navbar-nav w-100 justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Treinamentos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Funcionários</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Históricos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Relatórios</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cronograma</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="icon ion-md-person"></i> Nome do Usuário
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container">
+    <div class="container w-100">
       <div class="row">
-        <div class="col-md-12">
-          <h5 class="text-center">Questões</h5>
-          <hr class="mb-5">
-          <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Pergunta </th>
-                <th>Resposta</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr th:each="questao : ${listaDeQuestoes}">
-                <td th:text="${questao.id}"></td>
-                <td th:text="${questao.pergunta}"></td>
-                <td th:text="${questao.resposta}"></td>
-                <td>
-                  <a th:href="@{/questao/excluir/{id}(id = ${questao.id})}">
-                    <button type=button class="btn btn-danger">Remover</button>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th>Id</th>
-                <th>Pergunta </th>
-                <th>Resposta</th>
-              </tr>
-            </tfoot>
-          </table>
+        <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+          <div class="row align-items-center">
+            <div class="col-lg-5 col-md-5 mx-auto">
+              <div class="text-center">
+                <a href="/"><img th:src="@{/img/avance-oficial.png}"></a>
+              </div>
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center"></h5>
+                  <form class="form-signin">
+                    <div class="form-label-group">
+                      <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                      <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-label-group">
+                      <input type="password" id="senha" class="form-control" placeholder="Senha" required>
+                      <label for="senha">Senha</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -101,10 +53,6 @@
     <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
     <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.bundle.min.js}"></script>
-    <script type="text/javascript" th:src="@{/lib/dataTables/DataTables-1.10.20/js/jquery.dataTables.min.js}"></script>
-    <script type="text/javascript"
-      th:src="@{/lib/dataTables/DataTables-1.10.20/js/dataTables.bootstrap4.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/dataTables.js}"></script>
   </body>
 
 </html>

@@ -24,11 +24,13 @@ body {
 }*/
 
 .navbar-dark {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .navbar-nav .nav-item {
   padding: 5px;
+  margin: auto;
+  min-width: auto!important;
 }
 
 .card-signin {

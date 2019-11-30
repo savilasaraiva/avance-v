@@ -1,4 +1,5 @@
 <html xmlns:th="http://www.thymeleaf.org">
+
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,66 +11,48 @@
     <link th:href="@{img/avance-logo.png}" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      th:href="@{/lib/darkly/bootstrap.min.css}"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/lib/darkly/bootstrap.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
   </head>
 
   <body>
     <div class="container w-100">
-	    <div class="row">
-	      <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
-          <div class="row align-items-center">    
+      <div class="row">
+        <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
+          <div class="row align-items-center">
             <div class="col-lg-5 col-md-5 mx-auto">
               <div class="text-center">
                 <a href="/"><img th:src="@{/img/avance-oficial.png}"></a>
-              </div>       
-    	        <div class="card card-signin my-5">
-    	          <div class="card-body">
-    	            <h5 class="card-title text-center"></h5>
-    	            <form class="form-signin">
-    	              <div class="form-label-group">
-    	                <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
-    	                <label for="email">Email</label>
-    	              </div>
-    	
-    	              <div class="form-label-group">
-    	                <input type="password" id="senha" class="form-control" placeholder="Senha" required>
-    	                <label for="senha">Senha</label>
-    	              </div>
-    	              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
+              </div>
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <h5 class="card-title text-center"></h5>
+                  <form class="form-signin">
+                    <div class="form-label-group">
+                      <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+                      <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-label-group">
+                      <input type="password" id="senha" class="form-control" placeholder="Senha" required>
+                      <label for="senha">Senha</label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</button>
                   </form>
-    	          </div>
+                </div>
               </div>
             </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script
-      type="text/javascript"
-      th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"
-    ></script>
-    <script
-      type="text/javascript"
-      th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"
-    ></script>
-    <script
-      type="text/javascript"
-      th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.bundle.min.js}"
-    ></script>
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.bundle.min.js}"></script>
   </body>
+
 </html>

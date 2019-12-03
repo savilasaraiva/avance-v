@@ -69,61 +69,51 @@
         <div class="col-md-12">
           <h5 class="text-center">Cadastrar Treinamento</h5>
           <hr class="mb-5">
-          <div class="bs-stepper">
+          <div id="stepper4" class="bs-stepper">
             <div class="bs-stepper-header" role="tablist">
-              <div class="step" data-target="#treinameto">
-                <button type="button" class="step-trigger" role="tab" aria-controls="treinameto"
-                  id="treinameto-trigger">
+              <div class="step" data-target="#test-vl-1">
+                <button type="button" class="step-trigger" role="tab" id="stepper4trigger1" aria-controls="test-vl-1">
                   <span class="bs-stepper-circle">1</span>
-                  <span class="bs-stepper-label">Treinamento</span>
+                  <span class="bs-stepper-label">Email</span>
                 </button>
               </div>
-              <div class="line"></div>
-              <div class="step" data-target="#videos">
-                <button type="button" class="step-trigger" role="tab" aria-controls="videos" id="videos-trigger">
+              <div class="bs-stepper-line"></div>
+              <div class="step" data-target="#test-vl-2">
+                <button type="button" class="step-trigger" role="tab" id="stepper4trigger2" aria-controls="test-vl-2">
                   <span class="bs-stepper-circle">2</span>
-                  <span class="bs-stepper-label">Vídeo Aulas</span>
+                  <span class="bs-stepper-label">Password</span>
                 </button>
               </div>
-              <div class="line"></div>
-              <div class="step" data-target="#testes">
-                <button type="button" class="step-trigger" role="tab" aria-controls="testes" id="testes-trigger">
+              <div class="bs-stepper-line"></div>
+              <div class="step" data-target="#test-vl-3">
+                <button type="button" class="step-trigger" role="tab" id="stepper4trigger3" aria-controls="test-vl-3">
                   <span class="bs-stepper-circle">3</span>
-                  <span class="bs-stepper-label">Testes</span>
-                </button>
-              </div>
-              <div class="line"></div>
-              <div class="step" data-target="#participantes">
-                <button type="button" class="step-trigger" role="tab" aria-controls="participantes"
-                  id="participantes-trigger">
-                  <span class="bs-stepper-circle">4</span>
-                  <span class="bs-stepper-label">Participantes</span>
+                  <span class="bs-stepper-label">Validate</span>
                 </button>
               </div>
             </div>
             <div class="bs-stepper-content">
-              <div id="treinameto" class="content" role="tabpanel" aria-labelledby="treinameto-trigger">
-                <form class="needs-validation" onSubmit="return false" novalidate>
-                  <div class="form-row justify-content-center">
-                    <div class="form-group col-md-6">
-                      <label for="descricao">Descrição</label>
-                      <textarea class="form-control" id="descricao" placeholder="Descrição" rows="3"></textarea>
-                    </div>
+              <form onSubmit="return false">
+                <div id="test-vl-1" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepper4trigger1">
+                  <div class="form-group">
+                    <label for="exampleInputEmailV1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmailV1" placeholder="Enter email">
                   </div>
-                  <div class="form-row justify-content-center">
-                    <div class="form-group col-md-3">
-                      <label for="d">Data</label>
-                      <input type="date" class="form-control" id="d" placeholder="Data">
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    </div>
-                  </div>                  
-                </form>
-              </div>
-              <div id="videos" class="content" role="tabpanel" aria-labelledby="videos-trigger"></div>
-              <div id="testes" class="content" role="tabpanel" aria-labelledby="testes-trigger"></div>
-              <div id="participantes" class="content" role="tabpanel" aria-labelledby="participantes-trigger"></div>
+                  <button class="btn btn-primary" onclick="stepper4.next()">Next</button>
+                </div>
+                <div id="test-vl-2" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepper4trigger2">
+                  <div class="form-group">
+                    <label for="exampleInputPasswordV1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPasswordV1" placeholder="Password">
+                  </div>
+                  <button class="btn btn-primary" onclick="stepper4.previous()">Previous</button>
+                  <button class="btn btn-primary" onclick="stepper4.next()">Next</button>
+                </div>
+                <div id="test-vl-3" role="tabpanel" class="bs-stepper-pane fade" aria-labelledby="stepper4trigger3">
+                  <button class="btn btn-primary mt-5" onclick="stepper4.previous()">Previous</button>
+                  <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
